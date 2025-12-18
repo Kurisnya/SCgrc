@@ -1,0 +1,5 @@
+18/12/2025  [GITHUB]
+    Funções básicas criadas: Criar Elemento, Excluir Elemento, Imprimir Elemento.
+PARA PŔOXIMO DIA: Faça o modelo de dados 0.1 com todos os dados relevantes e faça um leitor
+e escritor de documentos para salvar os dados.
+

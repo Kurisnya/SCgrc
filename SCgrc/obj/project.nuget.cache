@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nd9Vat/RTWQ=",
+  "success": true,
+  "projectFilePath": "/home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc.csproj",
+  "expectedPackageFiles": [
+    "/home/kuris/.nuget/packages/lib.consolehelper/1.2.0/lib.consolehelper.1.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

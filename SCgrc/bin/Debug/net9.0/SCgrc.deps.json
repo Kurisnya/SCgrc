@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SCgrc/1.0.0": {
+        "dependencies": {
+          "Lib.ConsoleHelper": "1.2.0"
+        },
+        "runtime": {
+          "SCgrc.dll": {}
+        }
+      },
+      "Lib.ConsoleHelper/1.2.0": {
+        "runtime": {
+          "lib/net5.0/Lib.ConsoleHelper.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SCgrc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lib.ConsoleHelper/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T78lzrzH6/Gfk1TZpEe1FvclaUWmonmupaU0MNZeHUfwPCAfyduY7d4H5S+dAEE+Ck4jnom+qDnBTTcV+G+xLw==",
+      "path": "lib.consolehelper/1.2.0",
+      "hashPath": "lib.consolehelper.1.2.0.nupkg.sha512"
+    }
+  }
+}
