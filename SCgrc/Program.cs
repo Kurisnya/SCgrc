@@ -7,7 +7,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        ChoiceMenu menu = new ChoiceMenu();
+        CSVReader reader = new CSVReader();
+        ChoiceMenu menu = new ChoiceMenu(reader.SettingMain);
         lista minhalista= new lista();
         bool start=true;
         
@@ -30,12 +31,18 @@ class Program
         });
         menu.Options.Add(new MenuItem
         {
+            Title = "Exportar da pasta",
+            Value = "4"
+        });
+        menu.Options.Add(new MenuItem
+        {
             Title = "Sair",
             Value = "0"
         });
 
         //LOOP PRINCIPAL
         do{
+        //CONTROLE DO MY MENU
         var resposta = menu.ReadChoice(true);
             //SWITCH DO MENU
             switch (resposta.Value)
@@ -56,6 +63,11 @@ class Program
                             System.Console.WriteLine("Insira o INDEX do elemento que quer excluir:");
                             int index = int.Parse(Console.ReadLine());
                             minhalista.Remover(index);
+                        }
+                    break;
+                    case "4":
+                        {
+                            reader.Start(minhalista);
                         }
                     break;
                     case "0":

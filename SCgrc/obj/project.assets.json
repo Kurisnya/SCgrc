@@ -38,11 +38,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc.csproj",
+      "projectUniqueName": "/home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc/SCgrc.csproj",
       "projectName": "SCgrc",
-      "projectPath": "/home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc.csproj",
+      "projectPath": "/home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc/SCgrc.csproj",
       "packagesPath": "/home/kuris/.nuget/packages/",
-      "outputPath": "/home/kuris/Área de trabalho/Projetos/SCgrc/obj/",
+      "outputPath": "/home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kuris/.nuget/NuGet/NuGet.Config"
