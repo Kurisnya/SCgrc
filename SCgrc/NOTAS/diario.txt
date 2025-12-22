@@ -20,4 +20,6 @@ PARA PRÓXIMO DIA:
 
 PARA PRÓXIMO DIA:
     -> Conclua os features relevantes: importar, editar, salvar e talvez somar.
+    -> Documente de maneira apropriada cada etapa dos ".cs" de maneira organizada
+usando comentários "//". Isto deve incluir um resumo no cabeçalho de cada ".cs".
 
