@@ -2,29 +2,15 @@ using Lib.ConsoleHelper;
 
 namespace SCgrc
 {
-    internal class CSVReader
+    public class CSVReader
     {
-        public Settings Settings{get;set;}
-        public Settings SettingMain{get;set;}
-        public ChoiceMenu Mymenu{get;set;}
+        public AllMenus menu;
 
-        public CSVReader()
+        public CSVReader(AllMenus allMenus)
         {
-            SettingMain= new Settings
-            {
-                IntroText= "SISTEMA CENTRALIZADO DO GRC",
-                Selection= ">",
-                SelectionColor= ConsoleColor.Blue
-            };
-            Settings = new Settings
-            {
-                IntroText= $"Escolha o documento salvo desejado",
-                Selection= ">",
-                SelectionColor= ConsoleColor.Green
-
-            };
-            Mymenu = new ChoiceMenu(Settings);
+            menu=allMenus;
         }
+
         
         public void Start(lista lista)
         {
@@ -33,13 +19,12 @@ namespace SCgrc
             string[] arquivos = Directory.GetFiles(caminho);
             Console.WriteLine("Arquivos encontrados");
 
-
             // Um dos arquivos importados é escolhido para ser passado como vetor, transformando
             // seus dados em dados úteis.
             int cont = 0;
             foreach (string arquivo in arquivos)
             {
-                Mymenu.Options.Add(new MenuItem
+                menu.Import.Options.Add(new MenuItem
                 {
                     Title = $"{Path.GetFileName(arquivo)}",
                     Value = $"{cont}"
@@ -52,7 +37,7 @@ namespace SCgrc
             //--------------------------------------
             //--Escolha o documento salvo desejado--
             //--------------------------------------
-            var choice = Mymenu.ReadChoice(true);
+            var choice = menu.Import.ReadChoice(true);
             // Index do array se torna "cont".
             cont = int.Parse(choice.Value);
             // Finalmente, o caminho do arquivo principal é extraído.
@@ -76,7 +61,7 @@ namespace SCgrc
                     elemento cliente = CriaCustomerCSV(lista, valores);
                     lista.InserirFim(cliente);
                 }
-                Mymenu.Options.Clear();
+                menu.Import.Options.Clear();
                 reader.Close();
             }
 

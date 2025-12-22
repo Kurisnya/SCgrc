@@ -1,4 +1,5 @@
-﻿using Lib.ConsoleHelper;
+﻿using System.Runtime.ConstrainedExecution;
+using Lib.ConsoleHelper;
 
 namespace SCgrc;
 
@@ -7,43 +8,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        CSVReader reader = new CSVReader();
-        ChoiceMenu menu = new ChoiceMenu(reader.SettingMain);
+        AllMenus menus= new AllMenus();
+        CSVReader reader = new CSVReader(menus);
         lista minhalista= new lista();
         bool start=true;
         
         Console.Clear();
-        //MENU PRINCIPAL - CONFIGURAÇÕES
-        menu.Options.Add(new MenuItem
-        {
-            Title = "Criar Elemento",
-            Value = "1"
-        });
-                menu.Options.Add(new MenuItem
-        {
-            Title = "Imprimir Todos",
-            Value = "2"
-        });
-        menu.Options.Add(new MenuItem
-        {
-            Title = "Excluir elemento",
-            Value = "3"
-        });
-        menu.Options.Add(new MenuItem
-        {
-            Title = "Exportar da pasta",
-            Value = "4"
-        });
-        menu.Options.Add(new MenuItem
-        {
-            Title = "Sair",
-            Value = "0"
-        });
-
         //LOOP PRINCIPAL
         do{
         //CONTROLE DO MY MENU
-        var resposta = menu.ReadChoice(true);
+        var resposta = menus.Main1.ReadChoice(true);
             //SWITCH DO MENU
             switch (resposta.Value)
                 {
@@ -61,13 +35,37 @@ class Program
                         {
                             Console.Clear();
                             System.Console.WriteLine("Insira o INDEX do elemento que quer excluir:");
-                            int index = int.Parse(Console.ReadLine());
-                            minhalista.Remover(index);
+                            string index = Console.ReadLine();
+                                //TESTA SE O NÚMERO É UM INTEIRO;
+                                if(int.TryParse(index, out int indexn))
+                                {
+                                    minhalista.Remover(indexn);
+                                }
+                        else
+                        {
+                            Console.Clear();
+                            System.Console.WriteLine($"Erro: não é um númeor inteiro...\nPressione ENTER para continuar...");
+                            Console.ReadKey();
+                        }
+                            
                         }
                     break;
                     case "4":
                         {
                             reader.Start(minhalista);
+                        }
+                    break;
+                    case "5":
+                        {
+                            minhalista.Salvar();
+                        }
+                    break;
+                    case "6":
+                        {
+                            //Lançando duas vezes limpa completamente.
+                            minhalista.LimparDados();
+                            minhalista.LimparDados();
+
                         }
                     break;
                     case "0":

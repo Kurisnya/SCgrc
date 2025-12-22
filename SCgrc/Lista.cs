@@ -1,9 +1,12 @@
+using System.Text;
+
 namespace SCgrc
 {
     public class lista
     {
         private elemento primeiro{get;set;}
         private elemento ultimo{get;set;}
+        
 
 
         //Construtor: Automatizar.
@@ -24,14 +27,25 @@ namespace SCgrc
         {
             elemento i=primeiro;
 
-            do
+            if (i.prox != null)
+            {
+               do
             {
                 i=i.prox;
                 i.ToString();
 
             }while(i.prox!=null);
                 System.Console.WriteLine($"\nAperte ENTER para voltar");
-                Console.ReadKey();
+                Console.ReadKey(); 
+            }
+            else
+            {
+                Console.Clear();
+                System.Console.WriteLine(" ERRO: Não existem elementos presentes na lista atual\n Insira mais elementos no menu para imprimir elementos.\n Aperte ENTER para continuar...");
+                Console.ReadLine();
+            }
+
+            
         }
 
         //REMOVER ELEMENTO
@@ -57,6 +71,34 @@ namespace SCgrc
                 atual = atual.prox;
             }
             return false;
+        }
+
+        public void Salvar()
+        {
+            string path= "data/save.csv";
+            StringBuilder saída = new StringBuilder();
+
+            elemento i = primeiro.prox;
+
+            while(i!=null)
+            {
+                saída.Append($"{i.Index},");
+                saída.Append($"{i.nome},");
+                saída.Append($"{i.id}");
+                saída.Append('\n');
+
+                
+                i=i.prox;
+
+            }
+            File.Delete(path);
+            File.AppendAllText(path, saída.ToString());
+        }
+
+        public void LimparDados()
+        {
+            primeiro.prox= ultimo;
+            ultimo=null;
         }
 
         //Corrigir ordem de Index.
