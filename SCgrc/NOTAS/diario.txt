@@ -19,7 +19,19 @@ PARA PRÓXIMO DIA:
     básico de dados. "AllMenus.cs" criado: central de menus de console.
 
 PARA PRÓXIMO DIA:
-    -> Conclua os features relevantes: importar, editar, salvar e talvez somar.
-    -> Documente de maneira apropriada cada etapa dos ".cs" de maneira organizada
+    -> [FEITO] Conclua os features relevantes: pesquisar, importar, editar, salvar e talvez somar.
+    -> [FEITO] Documente de maneira apropriada cada etapa dos ".cs" de maneira organizada
 usando comentários "//". Isto deve incluir um resumo no cabeçalho de cada ".cs".
+------------------------------------------------------------------------------------------
+
+27/12/2025 [GITHUB]
+    Fluidez geral melhorada. Menu de pesquisa fácilmente personalizado criado. Pesquisa sobre
+    distribuição feita. Função faltante: editar. Ainda deve-se decidir o que fazer com a função
+    de somar.
+
+PARA PRÓXIMO DIA:
+    -> Decida o que fazer com o feature não intencional de soma.
+    -> Termine o modelo de dados definitivo.
+    -> Teste com um exemplo real de dados.
+    -> Faça demais melhorias necessárias.
 

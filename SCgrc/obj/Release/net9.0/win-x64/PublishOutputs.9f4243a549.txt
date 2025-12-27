@@ -1,0 +1,2 @@
+C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\bin\Release\net9.0\win-x64\publish\SCgrc.pdb
+C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\bin\Release\net9.0\win-x64\publish\SCgrc.exe

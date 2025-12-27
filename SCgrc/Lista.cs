@@ -9,22 +9,23 @@ namespace SCgrc
         
 
 
-        //Construtor: Automatizar.
+        //1. Construtor: Automatizar.
         public lista()
         {
             primeiro=ultimo=new elemento();
         }
 
-        //Inserir novo elemento no final da lista.
+        //2. Inserir novo elemento no final da lista.
         public void InserirFim(elemento x)
         {
             ultimo.prox=x;
             ultimo=ultimo.prox;
         }
 
-        //Ler todo mundo.
+        //3. Ler todo mundo.
         public void ImprimirTodos()
         {
+            Console.Clear();
             elemento i=primeiro;
 
             if (i.prox != null)
@@ -48,7 +49,7 @@ namespace SCgrc
             
         }
 
-        //REMOVER ELEMENTO
+        //4. REMOVER ELEMENTO
         public bool Remover(int index)
         {
             elemento anterior = primeiro;
@@ -73,6 +74,7 @@ namespace SCgrc
             return false;
         }
 
+        //5. Salvar dados em documento save.csv
         public void Salvar()
         {
             string path= "data/save.csv";
@@ -91,17 +93,19 @@ namespace SCgrc
                 i=i.prox;
 
             }
+            //5.1 Antes de salvar, o arquivo é excluído.
             File.Delete(path);
             File.AppendAllText(path, saída.ToString());
         }
 
+        //6. Excluir todos os dados presentes dentro do sistema
         public void LimparDados()
         {
             primeiro.prox= ultimo;
             ultimo=null;
         }
 
-        //Corrigir ordem de Index.
+        //7. Corrigir ordem de Index.
         public void CorrigeIndex(elemento noInicio)
         {
             elemento i = noInicio;
@@ -112,7 +116,7 @@ namespace SCgrc
             }
         }
         
-        //Contar elementos.
+        //8. Contar elementos.
         public int Contar()
         {
             elemento i = primeiro.prox;
@@ -126,6 +130,37 @@ namespace SCgrc
             }
 
             return cont;
+        }
+
+        //9. Buscar elemento com base no parâmetro
+         public void Pesquisar(string busca, string opt)
+        {
+            elemento i = primeiro.prox;
+            while (i != null)
+            {
+                PesquisarResult(i, busca, opt);
+                i = i.prox;
+            }
+        }
+
+        //10. Imprimir elementos com base no parâmetro
+        //opt: 1 nome, 2 index
+        public void PesquisarResult(elemento j,string busca, string opt)
+        {
+            if (opt == "1")
+            {
+                if (busca == j.nome.ToString().ToLower())
+                {
+                    j.ToString();
+                }
+            }
+            if (opt == "2")
+            {
+                if (busca == j.Index.ToString().ToLower())
+                {
+                    j.ToString();
+                }
+            }
         }
     }
 }

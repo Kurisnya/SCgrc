@@ -12,7 +12,6 @@ class Program
         CSVReader reader = new CSVReader(menus);
         lista minhalista= new lista();
         bool start=true;
-        
         Console.Clear();
         //LOOP PRINCIPAL
         do{
@@ -23,12 +22,17 @@ class Program
                 {
                     case "1":
                         {
-                            CriarElemento(new elemento(), minhalista);
+                            reader.Start(minhalista);
                         }
                     break;
                     case "2":
                         {
-                            minhalista.ImprimirTodos();
+                            Console.Clear();
+                            var opt= menus.Pesquisar.ReadChoice(true);
+                            System.Console.WriteLine("Pesquisar por:");
+                            string busca= Console.ReadLine();
+                            minhalista.Pesquisar(busca, opt.Value);
+                            Console.ReadKey();
                         }
                     break;
                     case "3":
@@ -52,24 +56,48 @@ class Program
                     break;
                     case "4":
                         {
-                            reader.Start(minhalista);
+                            CriarElemento(new elemento(), minhalista);
                         }
                     break;
                     case "5":
                         {
+                            System.Console.WriteLine("Tem certeza que deseja salvar?\nO salvamento irá escrever encima do último salvamento.\n(Y/N)");
+                        if (Console.ReadKey(true).Key == ConsoleKey.Y)
+                        {
                             minhalista.Salvar();
+                            System.Console.WriteLine("Dados salvos com êxito, aperte ENTER para continuar...");
+                            Console.ReadKey();
+                        }
+                        else{break;}
+                            
                         }
                     break;
                     case "6":
                         {
+                            
+                            System.Console.WriteLine("Tem certeza que deseja limpar todos os dados existentes?\nTodo progresso não salvo será perdido...\n(S/N)");
+                        if (Console.ReadKey(true).Key == ConsoleKey.Y)
+                            {
                             //Lançando duas vezes limpa completamente.
                             minhalista.LimparDados();
                             minhalista.LimparDados();
+                            Console.Clear();    
+                            System.Console.WriteLine("Todos os dados foram limpos com êxito;\nAperte ENTER para voltar...");
+                            Console.ReadKey();
+                            }
+                            else{break;}
+                            
 
+                        }
+                    break;
+                    case "7":
+                        {
+                            minhalista.ImprimirTodos();
                         }
                     break;
                     case "0":
                         {
+                            Console.Clear();
                             System.Console.WriteLine("Saindo....");
                             start=false;
                         }

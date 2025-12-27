@@ -1,3 +1,5 @@
+HEAD: Este software em seu modelo final funcionará em Avalonia UI, isso inclui aprender toda a lógica
+necessária para o mesmo;
 1. O software receberá uma lista de dados em .csv de maneira centralizada;
 2. O software deve organizar pelo nome/ dado geral os itens correspondentes e mostra-los na tela,
 podendo também editar tais dados.(LOOP: importar> pesquisar> coletar dados> editar> salvar)

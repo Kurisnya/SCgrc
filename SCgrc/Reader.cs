@@ -15,7 +15,7 @@ namespace SCgrc
         public void Start(lista lista)
         {
             // A pasta onde ficará os documentos importados é passada pelo "caminho" abaixo:
-            string caminho = "/home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc/data";
+            string caminho = "data";
             string[] arquivos = Directory.GetFiles(caminho);
             Console.WriteLine("Arquivos encontrados");
 
