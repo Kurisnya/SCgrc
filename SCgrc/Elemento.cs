@@ -5,15 +5,18 @@ namespace SCgrc
         public elemento prox{get;set;}
         public int Index{get;set;}
         public string nome{get;set;}
-        public string id{get;set;}
+        public string caminho{get;set;}
+        public string categoria{get;set;}
+        public string área{get;set;}
 
 
         //TO STRING:
         //Nome: nome         >Index: Index
-        //Id: id
+        //Exemplo/de/caminho
+        //Categoria: categoria
         public void ToString()
         {
-            System.Console.WriteLine($"Nome: {nome}         >Index: {Index}\nId: {id}\n--------------------------------");
+            System.Console.WriteLine($"Nome: {nome}         >Index: {Index}\n{caminho}\nCategoria: {categoria}\nÁrea: {área}\n--------------------------------");
         }
     }
 }

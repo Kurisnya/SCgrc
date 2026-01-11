@@ -91,13 +91,33 @@ namespace SCgrc
         Pesquisar= new ChoiceMenu(SettingPesquisa);
             Pesquisar.Options.Add(new MenuItem
             {
-                Title = "Pesquisar por nome",
+                Title = "Pesquisar por Index",
                 Value = "1"
             });
             Pesquisar.Options.Add(new MenuItem
             {
-                Title = "Pesquisar por Index",
+                Title = "Pesquisar por Nome",
                 Value = "2"
+            });
+            Pesquisar.Options.Add(new MenuItem
+            {
+                Title = "Pesquisar por Caminho",
+                Value = "3"
+            });
+            Pesquisar.Options.Add(new MenuItem
+            {
+                Title = "Pesquisar por Categoria",
+                Value = "4"
+            });
+            Pesquisar.Options.Add(new MenuItem
+            {
+                Title = "Pesquisar por Área",
+                Value = "5"
+            });
+            Pesquisar.Options.Add(new MenuItem
+            {
+                Title = "Voltar",
+                Value = "0"
             });
         }
         

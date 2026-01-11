@@ -4,7 +4,7 @@ namespace SCgrc
 {
     public class lista
     {
-        private elemento primeiro{get;set;}
+        public elemento primeiro{get;set;}
         private elemento ultimo{get;set;}
         
 
@@ -86,7 +86,10 @@ namespace SCgrc
             {
                 saída.Append($"{i.Index},");
                 saída.Append($"{i.nome},");
-                saída.Append($"{i.id}");
+                saída.Append($"{i.caminho},");
+                saída.Append($"{i.categoria},");
+                saída.Append($"{i.área}");
+
                 saída.Append('\n');
 
                 
@@ -101,8 +104,12 @@ namespace SCgrc
         //6. Excluir todos os dados presentes dentro do sistema
         public void LimparDados()
         {
-            primeiro.prox= ultimo;
-            ultimo=null;
+            int cont=0;
+            while (Contar() >= cont)
+            {
+            Remover(1);
+            cont++;                
+            }
         }
 
         //7. Corrigir ordem de Index.
@@ -149,14 +156,35 @@ namespace SCgrc
         {
             if (opt == "1")
             {
-                if (busca == j.nome.ToString().ToLower())
+                if (busca == j.Index.ToString().ToLower())
                 {
                     j.ToString();
                 }
             }
             if (opt == "2")
             {
-                if (busca == j.Index.ToString().ToLower())
+                if (busca == j.nome.ToString().ToLower())
+                {
+                    j.ToString();
+                }
+            }
+            if (opt == "3")
+            {
+                if (busca == j.caminho.ToString().ToLower())
+                {
+                    j.ToString();
+                }
+            }
+            if (opt == "4")
+            {
+                if (busca == j.categoria.ToString().ToLower())
+                {
+                    j.ToString();
+                }
+            }
+            if (opt == "5")
+            {
+                if (busca == j.área.ToString().ToLower())
                 {
                     j.ToString();
                 }

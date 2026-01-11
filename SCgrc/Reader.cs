@@ -77,7 +77,11 @@ namespace SCgrc
 
             x.nome = valores[1];
 
-            x.id = valores[2];
+            x.caminho = valores[2];
+
+            x.categoria= valores[3];
+
+            x.área= valores[4];
 
             return x;
         }

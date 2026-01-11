@@ -33,21 +33,39 @@
 /home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.pdb
 /home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.genruntimeconfig.cache
 /home/kuris/Área de trabalho/Projetos/SCgrc/SCgrc/obj/Debug/net9.0/ref/SCgrc.dll
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\bin\Debug\net9.0\SCgrc.exe
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\bin\Debug\net9.0\SCgrc.deps.json
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\bin\Debug\net9.0\SCgrc.runtimeconfig.json
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\bin\Debug\net9.0\SCgrc.dll
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\bin\Debug\net9.0\SCgrc.pdb
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\bin\Debug\net9.0\Lib.ConsoleHelper.dll
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.csproj.AssemblyReference.cache
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.AssemblyInfoInputs.cache
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.AssemblyInfo.cs
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.csproj.CoreCompileInputs.cache
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.sourcelink.json
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.csproj.Up2Date
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.dll
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\refint\SCgrc.dll
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.pdb
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\SCgrc.genruntimeconfig.cache
-C:\Users\christian.soares\Desktop\clear\SCgrc\SCgrc\obj\Debug\net9.0\ref\SCgrc.dll
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc.exe
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc.deps.json
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc.runtimeconfig.json
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc.dll
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc.pdb
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/bin/Debug/net9.0/Lib.ConsoleHelper.dll
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.csproj.AssemblyReference.cache
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.AssemblyInfoInputs.cache
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.AssemblyInfo.cs
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.csproj.CoreCompileInputs.cache
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.sourcelink.json
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.csproj.Up2Date
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.dll
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/refint/SCgrc.dll
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.pdb
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.genruntimeconfig.cache
+C:/Users/christian.soares/Desktop/clear/SCgrc/SCgrc/obj/Debug/net9.0/ref/SCgrc.dll
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc.deps.json
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc.runtimeconfig.json
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc.dll
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/bin/Debug/net9.0/SCgrc.pdb
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/bin/Debug/net9.0/Lib.ConsoleHelper.dll
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.csproj.AssemblyReference.cache
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.GeneratedMSBuildEditorConfig.editorconfig
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.AssemblyInfoInputs.cache
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.AssemblyInfo.cs
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.csproj.CoreCompileInputs.cache
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.sourcelink.json
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.csproj.Up2Date
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.dll
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/refint/SCgrc.dll
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.pdb
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/SCgrc.genruntimeconfig.cache
+/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/Debug/net9.0/ref/SCgrc.dll

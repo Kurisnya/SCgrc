@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj": {}
+    "/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/SCgrc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj": {
+    "/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/SCgrc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj",
+        "projectUniqueName": "/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/SCgrc.csproj",
         "projectName": "SCgrc",
-        "projectPath": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj",
-        "packagesPath": "C:\\Users\\christian.soares\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\obj\\",
+        "projectPath": "/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/SCgrc.csproj",
+        "packagesPath": "/home/kuris/.nuget/packages/",
+        "outputPath": "/home/kuris/Área de trabalho/clear/SCgrc/SCgrc/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\christian.soares\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/kuris/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,7 +39,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -60,30 +61,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[9.0.9, 9.0.9]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[9.0.9, 9.0.9]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[9.0.9, 9.0.9]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.9, 9.0.9]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.1.25451.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.112/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
