@@ -43,38 +43,43 @@ namespace SCgrc
         Main1= new ChoiceMenu(SettingMain1);
             Main1.Options.Add(new MenuItem
             {
-                Title = "Importar da pasta",
+                Title = "Status",
                 Value = "1"
             });
             Main1.Options.Add(new MenuItem
             {
-                Title = "Pesquisar",
+                Title = "Importar da pasta",
                 Value = "2"
             });
             Main1.Options.Add(new MenuItem
             {
-                Title = "Excluir elemento",
+                Title = "Pesquisar",
                 Value = "3"
             });
             Main1.Options.Add(new MenuItem
             {
-                Title = "Criar elemento",
+                Title = "Excluir elemento",
                 Value = "4"
             });
             Main1.Options.Add(new MenuItem
             {
-                Title = "Salvar",
+                Title = "Criar elemento",
                 Value = "5"
             });
             Main1.Options.Add(new MenuItem
             {
-                Title = "Limpar Dados",
+                Title = "Salvar",
                 Value = "6"
             });
             Main1.Options.Add(new MenuItem
             {
-                Title = "Imprimir",
+                Title = "Limpar Dados",
                 Value = "7"
+            });
+            Main1.Options.Add(new MenuItem
+            {
+                Title = "Imprimir",
+                Value = "8"
             });
             Main1.Options.Add(new MenuItem
             {

@@ -21,6 +21,20 @@ class Program
             switch (resposta.Value)
                 {
                     case "1":
+                    {
+                        if (minhalista.primeiro.prox != null)
+                        {
+                            Console.WriteLine("> Sistema alimentado;\n> Arquivos caregados: "+minhalista.Contar());
+                            Console.ReadKey(true);                            
+                        }
+                        else
+                        {
+                            System.Console.WriteLine("> Nenhum arquivo carregado no momento.");
+                            Console.ReadKey(true);                            
+                        }
+                    }
+                        break;
+                    case "2":
                         {
                         if (minhalista.primeiro.prox == null)
                         {
@@ -41,7 +55,7 @@ class Program
                         }
                         }
                     break;
-                    case "2":
+                    case "3":
                         {
                         while (start == true)
                             {
@@ -57,7 +71,7 @@ class Program
                             }
                         }
                     break;
-                    case "3":
+                    case "4":
                         {
                             Console.Clear();
                             System.Console.WriteLine("Insira o INDEX do elemento que quer excluir:");
@@ -76,12 +90,12 @@ class Program
                             
                         }
                     break;
-                    case "4":
+                    case "5":
                         {
                             CriarElemento(new elemento(), minhalista);
                         }
                     break;
-                    case "5":
+                    case "6":
                         {
                             System.Console.WriteLine("Tem certeza que deseja salvar?\nO salvamento irá escrever encima do último salvamento.\n(S/N)");
                         if (Console.ReadKey(true).Key == ConsoleKey.S)
@@ -92,7 +106,7 @@ class Program
                             
                         }
                     break;
-                    case "6":
+                    case "7":
                         {
                             
                             System.Console.WriteLine("Tem certeza que deseja limpar todos os dados existentes?\nTodo progresso não salvo será perdido...\n(S/N)");
@@ -107,7 +121,7 @@ class Program
 
                         }
                     break;
-                    case "7":
+                    case "8":
                         {
                             minhalista.ImprimirTodos();
                         }
@@ -122,6 +136,8 @@ class Program
                 }
         }while(start==true);
      }
+
+     
 
     //Fazer novo elemento.
     static void CriarElemento(elemento x, lista y)
