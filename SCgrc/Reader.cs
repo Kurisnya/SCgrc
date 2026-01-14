@@ -83,6 +83,11 @@ namespace SCgrc
 
             x.área= valores[4];
 
+            int Ano= int.Parse(valores[5]);
+            int Mês= int.Parse(valores[6]);
+            int Dia= int.Parse(valores[7]);
+            x.revisão= new DateTime(Ano,Mês,Dia);
+
             return x;
         }
 

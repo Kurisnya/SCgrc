@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\christian.soares\\Desktop\\1\\clear\\SCgrc\\SCgrc\\SCgrc.csproj": {}
+    "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\christian.soares\\Desktop\\1\\clear\\SCgrc\\SCgrc\\SCgrc.csproj": {
+    "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\christian.soares\\Desktop\\1\\clear\\SCgrc\\SCgrc\\SCgrc.csproj",
+        "projectUniqueName": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj",
         "projectName": "SCgrc",
-        "projectPath": "C:\\Users\\christian.soares\\Desktop\\1\\clear\\SCgrc\\SCgrc\\SCgrc.csproj",
+        "projectPath": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj",
         "packagesPath": "C:\\Users\\christian.soares\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\christian.soares\\Desktop\\1\\clear\\SCgrc\\SCgrc\\obj\\",
+        "outputPath": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\christian.soares\\AppData\\Roaming\\NuGet\\NuGet.Config"

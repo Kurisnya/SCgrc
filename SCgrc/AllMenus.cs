@@ -1,17 +1,20 @@
+using System.Runtime.InteropServices;
 using Lib.ConsoleHelper;
 
 namespace SCgrc
 {
     public class AllMenus
     {
+        public ChoiceMenu MainRoot;
         public ChoiceMenu Main1;
         public ChoiceMenu Import;
         public ChoiceMenu Pesquisar;
+        public ChoiceMenu Prazos;
 
         //1. Opções do Menu Principal
         public Settings SettingMain1= new Settings
             {
-                IntroText= "/////-SISTEMA CENTRALIZADO DO GRC-/////",
+                IntroText= "|- GRC HELPER > Elementos -| ",
                 Selection= ">",
                 SelectionColor= ConsoleColor.Blue
 
@@ -35,10 +38,59 @@ namespace SCgrc
 
             };
 
+        //4. Opções do MainRoot
+        public Settings SettingMainRoot= new Settings
+            {
+                IntroText= "|- GRC HELPER -|",
+                Selection= ">",
+                SelectionColor= ConsoleColor.Yellow
+            };
 
+        //5. Opções do Verificar Prazos
+        public Settings SettingPrazos= new Settings
+            {
+                IntroText= "|- GRC HELPER > Prazos -|",
+                Selection= ">",
+                SelectionColor= ConsoleColor.Yellow
+            };
 
         public AllMenus()
         {
+        //VERIFICAR PRAZOS
+            Prazos= new ChoiceMenu(SettingPrazos);
+            Prazos.Options.Add(new MenuItem
+            {
+                Title = "Scannear",
+                Value = "1"
+            });
+            Prazos.Options.Add(new MenuItem
+            {
+                Title = "Atualizar um Documento",
+                Value = "2"
+            });
+            Prazos.Options.Add(new MenuItem
+            {
+                Title = "Voltar",
+                Value = "0"
+            });
+
+        //MAINROOT
+            MainRoot= new ChoiceMenu(SettingMainRoot);
+            MainRoot.Options.Add(new MenuItem
+            {
+                Title = "Elementos",
+                Value = "1"
+            });
+            MainRoot.Options.Add(new MenuItem
+            {
+                Title = "Verificar Prazo dos Documentos",
+                Value = "2"
+            });
+            MainRoot.Options.Add(new MenuItem
+            {
+                Title = "Sair",
+                Value = "0"
+            });
         //MAIN1
         Main1= new ChoiceMenu(SettingMain1);
             Main1.Options.Add(new MenuItem
@@ -58,7 +110,7 @@ namespace SCgrc
             });
             Main1.Options.Add(new MenuItem
             {
-                Title = "Excluir elemento",
+                Title = "Imprimir",
                 Value = "4"
             });
             Main1.Options.Add(new MenuItem
@@ -78,12 +130,12 @@ namespace SCgrc
             });
             Main1.Options.Add(new MenuItem
             {
-                Title = "Imprimir",
+                Title = "Excluir elemento",
                 Value = "8"
             });
             Main1.Options.Add(new MenuItem
             {
-                Title = "Sair",
+                Title = "Voltar",
                 Value = "0"
             });
 

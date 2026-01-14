@@ -1,4 +1,5 @@
-﻿using System.Runtime.ConstrainedExecution;
+﻿using System.Diagnostics;
+using System.Runtime.ConstrainedExecution;
 using Lib.ConsoleHelper;
 
 namespace SCgrc;
@@ -12,128 +13,189 @@ class Program
         CSVReader reader = new CSVReader(menus);
         lista minhalista= new lista();
         bool start=true;
+        bool start2=true;
+        bool start3=true;
         Console.Clear();
         //LOOP PRINCIPAL
         do{
         //CONTROLE DO MY MENU
-        var resposta = menus.Main1.ReadChoice(true);
+        var resposta1= menus.MainRoot.ReadChoice(true);
             //SWITCH DO MENU
-            switch (resposta.Value)
-                {
-                    case "1":
+            switch (resposta1.Value)
+            {
+                case "1":
                     {
-                        if (minhalista.primeiro.prox != null)
-                        {
-                            Console.WriteLine("> Sistema alimentado;\n> Arquivos caregados: "+minhalista.Contar());
-                            Console.ReadKey(true);                            
-                        }
-                        else
-                        {
-                            System.Console.WriteLine("> Nenhum arquivo carregado no momento.");
-                            Console.ReadKey(true);                            
-                        }
-                    }
-                        break;
-                    case "2":
-                        {
-                        if (minhalista.primeiro.prox == null)
-                        {
-                            reader.Start(minhalista);
-                        }
-                        else
-                        {
-                            System.Console.WriteLine("Tem certeza que deseja importar outro arquivo? Todo dado NÃO SALVO será perdido...(S/N)");
-                            if (Console.ReadKey(true).Key != ConsoleKey.S)
+                        start2=true;
+                        do
                             {
-                                break;
-                            }
-                            //LIMPA TUDO
-                            minhalista.LimparDados();
-                            minhalista.LimparDados();
-
-                            reader.Start(minhalista);
-                        }
-                        }
-                    break;
-                    case "3":
-                        {
-                        while (start == true)
-                            {
-                                Console.Clear();
-                                var opt= menus.Pesquisar.ReadChoice(true);
-                                if(opt.Value=="0")
-                                    break;  
-                                System.Console.WriteLine("Pesquisar por:");
-                                string busca= Console.ReadLine().ToLower();
-                                System.Console.WriteLine();
-                                minhalista.Pesquisar(busca, opt.Value);
-                                Console.ReadKey();
-                            }
-                        }
-                    break;
-                    case "4":
-                        {
-                            Console.Clear();
-                            System.Console.WriteLine("Insira o INDEX do elemento que quer excluir:");
-                            string index = Console.ReadLine();
-                                //TESTA SE O NÚMERO É UM INTEIRO;
-                                if(int.TryParse(index, out int indexn))
+                            var resposta = menus.Main1.ReadChoice(true);
+                            //SWITCH DO MENU
+                            switch (resposta.Value)
                                 {
-                                    minhalista.Remover(indexn);
-                                }
-                        else
-                        {
-                            Console.Clear();
-                            System.Console.WriteLine($"Erro: não é um número inteiro...\nPressione ENTER para continuar...");
-                            Console.ReadKey();
-                        }
-                            
-                        }
-                    break;
-                    case "5":
-                        {
-                            CriarElemento(new elemento(), minhalista);
-                        }
-                    break;
-                    case "6":
-                        {
-                            System.Console.WriteLine("Tem certeza que deseja salvar?\nO salvamento irá escrever encima do último salvamento.\n(S/N)");
-                        if (Console.ReadKey(true).Key == ConsoleKey.S)
-                        {
-                            minhalista.Salvar();
-                        }
-                        else{break;}
-                            
-                        }
-                    break;
-                    case "7":
-                        {
-                            
-                            System.Console.WriteLine("Tem certeza que deseja limpar todos os dados existentes?\nTodo progresso não salvo será perdido...\n(S/N)");
-                        if (Console.ReadKey(true).Key == ConsoleKey.S)
-                            {
-                            //Lançando duas vezes limpa completamente.
-                            minhalista.LimparDados();
-                            minhalista.LimparDados();    
-                            }
-                            else{break;}
-                            
+                                    case "1":
+                                    {
+                                        if (minhalista.primeiro.prox != null)
+                                        {
+                                            Console.WriteLine("> Sistema alimentado;\n> Arquivos caregados: "+minhalista.Contar());
+                                            Console.ReadKey(true);                            
+                                        }
+                                        else
+                                        {
+                                            System.Console.WriteLine("> Nenhum arquivo carregado no momento.");
+                                            Console.ReadKey(true);                            
+                                        }
+                                    }
+                                    break;
+                                    case "2":
+                                        {
+                                        if (minhalista.primeiro.prox == null)
+                                        {
+                                            reader.Start(minhalista);
+                                        }
+                                        else
+                                        {
+                                            System.Console.WriteLine("Tem certeza que deseja importar outro arquivo? Todo dado NÃO SALVO será perdido...(S/N)");
+                                            if (Console.ReadKey(true).Key != ConsoleKey.S)
+                                            {
+                                                break;
+                                            }
+                                            //LIMPA TUDO
+                                            minhalista.LimparDados();
+                                            minhalista.LimparDados();
 
-                        }
-                    break;
-                    case "8":
+                                            reader.Start(minhalista);
+                                        }
+                                        }
+                                    break;
+                                    case "3":
+                                        {
+                                        while (start == true)
+                                            {
+                                                Console.Clear();
+                                                var opt= menus.Pesquisar.ReadChoice(true);
+                                                if(opt.Value=="0")
+                                                    break;  
+                                                System.Console.WriteLine("Pesquisar por:");
+                                                string busca= Console.ReadLine().ToLower();
+                                                System.Console.WriteLine();
+                                                minhalista.Pesquisar(busca, opt.Value);
+                                                Console.ReadKey();
+                                            }
+                                        }
+                                    break;
+                                    case "4":
+                                        {
+                                            minhalista.ImprimirTodos();
+                                        }
+                                    break;
+                                    case "5":
+                                        {
+                                            CriarElemento(new elemento(), minhalista);
+                                        }
+                                    break;
+                                    case "6":
+                                        {
+                                            System.Console.WriteLine("Tem certeza que deseja salvar?\nO salvamento irá escrever encima do último salvamento.\n(S/N)");
+                                        if (Console.ReadKey(true).Key == ConsoleKey.S)
+                                        {
+                                            minhalista.Salvar();
+                                        }
+                                        else{break;}
+
+                                        }
+                                    break;
+                                    case "7":
+                                        {
+                                        
+                                            System.Console.WriteLine("Tem certeza que deseja limpar todos os dados existentes?\nTodo progresso não salvo será perdido...\n(S/N)");
+                                        if (Console.ReadKey(true).Key == ConsoleKey.S)
+                                            {
+                                            //Lançando duas vezes limpa completamente.
+                                            minhalista.LimparDados();
+                                            minhalista.LimparDados();    
+                                            }
+                                            else{break;}
+
+
+                                        }
+                                    break;
+                                    case "8":
+                                        {
+                                            Console.Clear();
+                                            System.Console.WriteLine("Insira o INDEX do elemento que quer excluir:");
+                                            string index = Console.ReadLine();
+                                                //TESTA SE O NÚMERO É UM INTEIRO;
+                                                if(int.TryParse(index, out int indexn))
+                                                {
+                                                    minhalista.Remover(indexn);
+                                                }
+                                        else
+                                        {
+                                            Console.Clear();
+                                            System.Console.WriteLine($"Erro: não é um número inteiro...\nPressione ENTER para continuar...");
+                                            Console.ReadKey();
+                                        }
+                                        }
+                                    break;
+                                    case "0":
+                                        {
+                                            Console.Clear();
+                                            System.Console.WriteLine("Saindo....");
+                                            start2=false;
+                                        }
+                                    break;
+                                }    
+                            }while(start2==true);
+
+                    }
+                break;
+                case "2":
+                    {
+                        start3=true;
+                        do
                         {
-                            minhalista.ImprimirTodos();
-                        }
-                    break;
-                    case "0":
-                        {
-                            Console.Clear();
-                            System.Console.WriteLine("Saindo....");
-                            start=false;
-                        }
-                    break;
-                }
+                            //MENU
+                        var resposta3= menus.Prazos.ReadChoice(true);
+                        //SWITHC DO MENU
+                        switch (resposta3.Value)
+                            {
+                                case "1":
+                                    {
+                                        minhalista.escrever();
+
+                                    }
+                                break;
+                                case "2":
+                                    {
+                                        Console.Clear();
+                                        System.Console.WriteLine("Insira o Index do Documento que você deseja atualizar:");
+                                        string resposta4=Console.ReadLine();
+
+                                        minhalista.Atualizar(resposta4);
+                                    }
+                                break;
+                                case "0":
+                                    {
+                                        Console.Clear();
+                                        System.Console.WriteLine("Saindo....");
+                                        start3=false;
+                                    }
+                                break;
+
+                            }
+                        }while(start3==true);
+                        
+                    }
+                break;
+                case "0":
+                    {
+                        Console.Clear();
+                        System.Console.WriteLine("Saindo....");
+                        start=false;
+                    }
+                break;
+            }
+            
         }while(start==true);
      }
 

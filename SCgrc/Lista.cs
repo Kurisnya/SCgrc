@@ -190,5 +190,68 @@ namespace SCgrc
                 }
             }
         }
+
+        public void escrever()
+        {
+            Console.Clear();
+            elemento i=primeiro;
+
+            if (i.prox != null)
+            {
+               do
+            {
+                i=i.prox;
+                    if (DateTime.Today > i.revisão)
+                    {
+                        System.Console.WriteLine("-----Documentos Vencidos-----\n");
+                        System.Console.WriteLine("[VENCIDO]");
+                        i.ToString();
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("> Todos os documentos estão atuaizados, parabéns! :)");
+                    }
+            }while(i.prox!=null);
+                System.Console.WriteLine($"\nAperte ENTER para voltar");
+                Console.ReadKey(); 
+            }
+            else
+            {
+                Console.Clear();
+                System.Console.WriteLine(" ERRO: Não existem elementos presentes na lista atual\n Insira mais elementos no menu para imprimir elementos.\n Aperte ENTER para continuar...");
+                Console.ReadLine();
+            }
+
+        }
+
+        public void Atualizar(string index)
+        {
+                elemento i=primeiro;
+
+                if (i.prox != null)
+                {
+                   do
+                {
+                    i=i.prox;
+                    if(index == i.Index.ToString())
+                        {
+                            i.revisão = DateTime.Now;
+                            
+                            System.Console.WriteLine("> Documento atualizado com êxito!");
+                            break;  
+                        }    
+                }while(i.prox!=null);
+
+                    System.Console.WriteLine($"\nAperte ENTER para voltar");
+                    Console.ReadKey(); 
+                }
+                else
+                {
+                    Console.Clear();
+                    System.Console.WriteLine("ERRO: Não existem elementos presentes na lista atual\n Insira mais elementos no menu para imprimir elementos.\n Aperte ENTER para continuar...");
+                    Console.ReadLine();
+                }  
+            
+        }
     }
 }
