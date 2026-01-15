@@ -88,7 +88,10 @@ namespace SCgrc
                 saída.Append($"{i.nome},");
                 saída.Append($"{i.caminho},");
                 saída.Append($"{i.categoria},");
-                saída.Append($"{i.área}");
+                saída.Append($"{i.área},");
+                saída.Append($"{i.revisão.Year},");
+                saída.Append($"{i.revisão.Month},");
+                saída.Append($"{i.revisão.Day}");
 
                 saída.Append('\n');
 

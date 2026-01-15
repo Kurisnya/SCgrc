@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SCgrc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3aee4e8008feed230dd7dfe2c221e3a6db0af88")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16fa862ee9ad766b59ba9f4a3b0a45543d5dee14")]
 [assembly: System.Reflection.AssemblyProductAttribute("SCgrc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SCgrc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

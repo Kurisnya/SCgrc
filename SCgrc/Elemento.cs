@@ -16,9 +16,10 @@ namespace SCgrc
         //Nome: nome         
         //Exemplo/de/caminho
         //Categoria: categoria
+        //Data: dd/MM/yyyy
         public void ToString()
         {
-            System.Console.WriteLine($">Index: {Index}\nNome: {nome}\n{caminho}\nCategoria: {categoria}\nÁrea: {área}\nUltima Revisão:{revisão}\n--------------------------------");
+            System.Console.WriteLine($">Index: {Index}\nNome: {nome}\n{caminho}\nCategoria: {categoria}\nÁrea: {área}\nUltima Revisão: {revisão.ToString("dd/MM/yyyy")}\n--------------------------------");
         }
     }
 }
