@@ -38,11 +38,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj",
+      "projectUniqueName": "C:\\Users\\christian.soares\\Desktop\\2\\SCgrc\\SCgrc\\SCgrc\\SCgrc.csproj",
       "projectName": "SCgrc",
-      "projectPath": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj",
+      "projectPath": "C:\\Users\\christian.soares\\Desktop\\2\\SCgrc\\SCgrc\\SCgrc\\SCgrc.csproj",
       "packagesPath": "C:\\Users\\christian.soares\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\obj\\",
+      "outputPath": "C:\\Users\\christian.soares\\Desktop\\2\\SCgrc\\SCgrc\\SCgrc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\christian.soares\\AppData\\Roaming\\NuGet\\NuGet.Config"

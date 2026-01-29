@@ -204,15 +204,11 @@ namespace SCgrc
                do
             {
                 i=i.prox;
-                    if (DateTime.Today > i.revisão)
+                    if (DateTime.Today > i.revisão.AddYears(1))
                     {
                         System.Console.WriteLine("-----Documentos Vencidos-----\n");
                         System.Console.WriteLine("[VENCIDO]");
                         i.ToString();
-                    }
-                    else
-                    {
-                        System.Console.WriteLine("> Todos os documentos estão atuaizados, parabéns! :)");
                     }
             }while(i.prox!=null);
                 System.Console.WriteLine($"\nAperte ENTER para voltar");

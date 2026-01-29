@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5taS6DtR1Oc=",
+  "dgSpecHash": "QbC4q00Afdk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\christian.soares\\Desktop\\clear\\SCgrc\\SCgrc\\SCgrc.csproj",
+  "projectFilePath": "C:\\Users\\christian.soares\\Desktop\\2\\SCgrc\\SCgrc\\SCgrc\\SCgrc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\christian.soares\\.nuget\\packages\\lib.consolehelper\\1.2.0\\lib.consolehelper.1.2.0.nupkg.sha512",
     "C:\\Users\\christian.soares\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.9\\microsoft.netcore.app.ref.9.0.9.nupkg.sha512",
