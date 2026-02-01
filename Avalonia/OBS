@@ -1,0 +1,29 @@
+1. Escreva
+
+    DataContext = new MainWindowViewModel();
+   
+no MainWindow para decidir que os binds vem do MainWindowViewModel.
+
+2. Coloque os elementos que serao bindados MainWindowViewModel usando este modelo:
+
+    [ObservableProperty]
+    public string _greeting = "Welcome to Avalonia!";
+
+3. Crie as funções fazendo o seguinte padrão:
+3.2 
+
+    public void Testando()
+    {
+        Greeting= "mudou";
+    }
+
+3.3 (MainWindow)
+
+    public void Testando_Click(object? sender, RoutedEventArgs e)
+    {
+        var vm = (MainWindowViewModel)DataContext!;
+        vm.Testando();
+    }
+
+Desta maneira, o Testando_Click apenas executa a função no ViewModel.
+
