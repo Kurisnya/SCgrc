@@ -30,6 +30,8 @@
 
                     <Button Width="300" IsVisible="{Binding Home}" Command="{Binding SwitchyToDocumentosCommand}">Nossos Dados</Button>
                     <Button Width="300" IsVisible="{Binding Home}" Command="{Binding ListaVencidosSwitchCommand}">Verificar Prazo dos Documentos</Button>
+                    <Button Width="300" IsVisible="{Binding Home}" Command="{Binding AtualizarVencidoCommand}" CommandParameter="Política de Privacidade da Informação">1234</Button>
+
 
                     <Button Width="300" IsVisible="{Binding Documentos}">Importar da Pasta</Button>
                     <Button Width="300" IsVisible="{Binding Documentos}">Pesquisar</Button>
@@ -50,45 +52,54 @@
         <SplitView.Content>
             <ScrollViewer>
                 <StackPanel>
-
+                    <!--ABAS DE DOCUMENTOS-->
                     <StackPanel Orientation="Horizontal">
                         <Button Command="{Binding ListaListadosSwitchCommand}">Listados</Button><Button Command="{Binding ListaProcedimentosSwitchCommand}">Procedimentos</Button>
                     </StackPanel>
                     <!--TELA DOS LISTADOS-->
-                    <ListBox    IsVisible="{Binding ListaListadosView}"
-                                ItemsSource="{Binding ListadosNome}"
-                                >
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding}">
-                                    <TextBlock.ContextMenu>
-                                        <ContextMenu>
-                                            <MenuItem Header="Editar" />
-                                            <MenuItem Header="Excluir" />
-                                        </ContextMenu>
-                                    </TextBlock.ContextMenu>
-                                </TextBlock>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-
+                    <StackPanel IsVisible="{Binding ListaListadosView}">
+                        <TextBlock  Margin="5"
+                                    FontSize="24"
+                                    HorizontalAlignment="Center"
+                                    Text="Listados">
+                        </TextBlock>
+                        <ListBox ItemsSource="{Binding ListadosNome}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}">
+                                        <TextBlock.ContextMenu>
+                                            <ContextMenu>
+                                                <MenuItem Header="Editar" />
+                                                <MenuItem Header="Excluir" />
+                                            </ContextMenu>
+                                        </TextBlock.ContextMenu>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
                     <!--TELA DOS PROCEDIMENTOS-->
-                    <ListBox    IsVisible="{Binding ListaProcedimentosView}"
-                                ItemsSource="{Binding ProcedimentosNome}"
-                                >
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding}">
-                                    <TextBlock.ContextMenu>
-                                        <ContextMenu>
-                                            <MenuItem Header="Editar" />
-                                            <MenuItem Header="Excluir" />
-                                        </ContextMenu>
-                                    </TextBlock.ContextMenu>
-                                </TextBlock>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
+                    <StackPanel IsVisible="{Binding ListaProcedimentosView}">
+                        <TextBlock  Margin="5"
+                                    FontSize="24"
+                                    HorizontalAlignment="Center"
+                                    Text="Procedimentos">
+                        </TextBlock>
+                        <ListBox ItemsSource="{Binding ProcedimentosNome}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}">
+                                        <TextBlock.ContextMenu>
+                                            <ContextMenu>
+                                                <MenuItem Header="Editar" />
+                                                <MenuItem Header="Excluir" />
+                                            </ContextMenu>
+                                        </TextBlock.ContextMenu>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
 
                     <!--TELA DE VENCIDOS-->
                     <ListBox    IsVisible="{Binding ListaVencidosView}"
@@ -98,12 +109,11 @@
                             <DataTemplate>
                                 <TextBlock Text="{Binding}">
                                     <TextBlock.ContextMenu>
-                                        <ContextMenu    DataContext="{Binding $parent[Window].DataContext}">
+                                        <ContextMenu    DataContext="{Binding}">
                                             <MenuItem   Header="Editar" />
                                             <MenuItem   Header="Atualizar"
-                                                        Command="{Binding AtualizarVencidoCommand}"
-                                                        CommandParameter="{Binding PlacementTarget.DataContext,
-                                                        RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                                                        Command="{Binding $parent[Window].DataContext.AtualizarVencidoCommand}"
+                                                        CommandParameter="{Binding}" />
                                         </ContextMenu>
                                     </TextBlock.ContextMenu>
                                 </TextBlock>
