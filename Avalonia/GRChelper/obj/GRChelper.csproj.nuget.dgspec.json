@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kuris/Área de trabalho/clear/GRChelper/GRChelper.csproj": {}
+    "/home/kuris/Área de trabalho/clear/123/SCgrc/Avalonia/GRChelper/GRChelper.csproj": {}
   },
   "projects": {
-    "/home/kuris/Área de trabalho/clear/GRChelper/GRChelper.csproj": {
+    "/home/kuris/Área de trabalho/clear/123/SCgrc/Avalonia/GRChelper/GRChelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kuris/Área de trabalho/clear/GRChelper/GRChelper.csproj",
+        "projectUniqueName": "/home/kuris/Área de trabalho/clear/123/SCgrc/Avalonia/GRChelper/GRChelper.csproj",
         "projectName": "GRChelper",
-        "projectPath": "/home/kuris/Área de trabalho/clear/GRChelper/GRChelper.csproj",
+        "projectPath": "/home/kuris/Área de trabalho/clear/123/SCgrc/Avalonia/GRChelper/GRChelper.csproj",
         "packagesPath": "/home/kuris/.nuget/packages/",
-        "outputPath": "/home/kuris/Área de trabalho/clear/GRChelper/obj/",
+        "outputPath": "/home/kuris/Área de trabalho/clear/123/SCgrc/Avalonia/GRChelper/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kuris/.nuget/NuGet/NuGet.Config"

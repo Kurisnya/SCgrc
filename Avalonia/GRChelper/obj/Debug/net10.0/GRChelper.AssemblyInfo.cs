@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GRChelper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8deb25f4be3b8c66d0e77debaad7103f9138c195")]
 [assembly: System.Reflection.AssemblyProductAttribute("GRChelper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GRChelper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

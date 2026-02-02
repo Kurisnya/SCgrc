@@ -22,14 +22,14 @@
                 CompactPaneLength="48"
                 DisplayMode="CompactInline"
                 Name="SplitView">
-
         <SplitView.Pane>
 
             <StackPanel>
                 <Button Command="{Binding SwitchySplitViewCommand}"> - </Button>    
                 <StackPanel>
+
                     <Button Width="300" IsVisible="{Binding Home}" Command="{Binding SwitchyToDocumentosCommand}">Nossos Dados</Button>
-                    <Button Width="300" IsVisible="{Binding Home}">Verificar Prazo dos Documentos</Button>
+                    <Button Width="300" IsVisible="{Binding Home}" Command="{Binding ListaVencidosSwitchCommand}">Verificar Prazo dos Documentos</Button>
 
                     <Button Width="300" IsVisible="{Binding Documentos}">Importar da Pasta</Button>
                     <Button Width="300" IsVisible="{Binding Documentos}">Pesquisar</Button>
@@ -48,11 +48,71 @@
 
         </SplitView.Pane>
         <SplitView.Content>
+            <ScrollViewer>
+                <StackPanel>
 
-            <StackPanel>
-            <TextBlock Text="{Binding TextoPrincipal}">Content</TextBlock>
-            </StackPanel>
-            
+                    <StackPanel Orientation="Horizontal">
+                        <Button Command="{Binding ListaListadosSwitchCommand}">Listados</Button><Button Command="{Binding ListaProcedimentosSwitchCommand}">Procedimentos</Button>
+                    </StackPanel>
+                    <!--TELA DOS LISTADOS-->
+                    <ListBox    IsVisible="{Binding ListaListadosView}"
+                                ItemsSource="{Binding ListadosNome}"
+                                >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}">
+                                    <TextBlock.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Editar" />
+                                            <MenuItem Header="Excluir" />
+                                        </ContextMenu>
+                                    </TextBlock.ContextMenu>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <!--TELA DOS PROCEDIMENTOS-->
+                    <ListBox    IsVisible="{Binding ListaProcedimentosView}"
+                                ItemsSource="{Binding ProcedimentosNome}"
+                                >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}">
+                                    <TextBlock.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Editar" />
+                                            <MenuItem Header="Excluir" />
+                                        </ContextMenu>
+                                    </TextBlock.ContextMenu>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <!--TELA DE VENCIDOS-->
+                    <ListBox    IsVisible="{Binding ListaVencidosView}"
+                                ItemsSource="{Binding VencidosNome}"
+                                >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}">
+                                    <TextBlock.ContextMenu>
+                                        <ContextMenu    DataContext="{Binding $parent[Window].DataContext}">
+                                            <MenuItem   Header="Editar" />
+                                            <MenuItem   Header="Atualizar"
+                                                        Command="{Binding AtualizarVencidoCommand}"
+                                                        CommandParameter="{Binding PlacementTarget.DataContext,
+                                                        RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                                        </ContextMenu>
+                                    </TextBlock.ContextMenu>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                </StackPanel>
+            </ScrollViewer>
         </SplitView.Content>
     </SplitView>
 

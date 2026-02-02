@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FLx3JJE7Zz8=",
+  "dgSpecHash": "u6bP06qmtkM=",
   "success": true,
-  "projectFilePath": "/home/kuris/Área de trabalho/clear/GRChelper/GRChelper.csproj",
+  "projectFilePath": "/home/kuris/Área de trabalho/clear/123/SCgrc/Avalonia/GRChelper/GRChelper.csproj",
   "expectedPackageFiles": [
     "/home/kuris/.nuget/packages/avalonia/11.3.11/avalonia.11.3.11.nupkg.sha512",
     "/home/kuris/.nuget/packages/avalonia.angle.windows.natives/2.1.25547.20250602/avalonia.angle.windows.natives.2.1.25547.20250602.nupkg.sha512",
