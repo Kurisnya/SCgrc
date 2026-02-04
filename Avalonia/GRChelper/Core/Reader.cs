@@ -8,8 +8,8 @@ namespace GRChelper.Core;
         public void Start(lista lista, string MeuCaminho)
         {
             // A pasta onde ficará os documentos importados é passada pelo "caminho" abaixo:
-            //string caminho = "data";
-            //string[] arquivos = Directory.GetFiles(caminho);
+            //string caminho1 = "data";
+            //string[] arquivos = Directory.GetFiles(caminho1);
 
             // Um dos arquivos importados é escolhido para ser passado como vetor, transformando
             // seus dados em dados úteis.
@@ -30,8 +30,7 @@ namespace GRChelper.Core;
 
             //O leitor do documento é criado.
             StreamReader reader = null;
-            if (File.Exists(caminho))
-            {
+
                 //abrindo documento...
                 reader = new StreamReader(File.OpenRead(caminho));
 
@@ -47,7 +46,6 @@ namespace GRChelper.Core;
                     lista.InserirFim(cliente);
                 }
                 reader.Close();
-            }
 
         }
         //Função que alimenta o objeto com os elementos:

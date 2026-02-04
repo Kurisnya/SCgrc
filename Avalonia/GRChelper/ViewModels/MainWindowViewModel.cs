@@ -2,14 +2,19 @@
 
 using System;
 using System.Collections.ObjectModel;
+using System.IO;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using GRChelper.Core;
+using GRChelper.Core.Services;
 using GRChelper.Views;
 using Tmds.DBus.Protocol;
 
 public partial class MainWindowViewModel : ObservableObject
 {
+    [ObservableProperty]
+    private StorageService _MyStorage = new();
+
     [ObservableProperty]
     private lista _listaProcedimentos = new();
 
@@ -26,7 +31,8 @@ public partial class MainWindowViewModel : ObservableObject
 
     public MainWindowViewModel()
     {
-            Reader.Start(ListaListados,"Core/data/Listados.csv");
+            
+            Reader.Start(ListaListados, MyStorage.GetFilePath("Listados.csv"));
             elemento i= ListaListados.primeiro;
 
             if (i.prox != null)
@@ -42,7 +48,7 @@ public partial class MainWindowViewModel : ObservableObject
 
 
 
-            Reader.Start(ListaProcedimentos,"Core/data/Procedimentos.csv");
+            Reader.Start(ListaProcedimentos,MyStorage.GetFilePath("Procedimentos.csv"));
             elemento j= ListaProcedimentos.primeiro;
 
             if (j.prox != null)
